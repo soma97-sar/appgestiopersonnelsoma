@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace appgestiopersonnelsoma
+namespace appgestiopersonnelsoma.vue
 {
-    public partial class Form1 : Form
+    public partial class responsablegestioper : Form
     {
-        public Form1()
+        public responsablegestioper()
         {
             InitializeComponent();
         }
