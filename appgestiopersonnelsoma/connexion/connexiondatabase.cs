@@ -103,9 +103,9 @@ namespace appgestiopersonnelsoma.connexion
             }
         }
 
-
-
-
-
+        //internal void ReqSelect(string req, Dictionary<string, object> parameters)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

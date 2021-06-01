@@ -101,6 +101,7 @@ namespace appgestiopersonnelsoma
             this.btnlogin.Size = new System.Drawing.Size(122, 62);
             this.btnlogin.TabIndex = 6;
             this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // appgestio
             // 

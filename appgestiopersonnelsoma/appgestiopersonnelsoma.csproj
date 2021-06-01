@@ -56,12 +56,27 @@
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="appligestiopersonnelsomaDataSet.Designer.cs">
+    <Compile Include="appligestiopersonnelsomaDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>appligestiopersonnelsomaDataSet.xsd</DependentUpon>
+      <DependentUpon>appligestiopersonnelsomaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db2.xsd</DependentUpon>
     </Compile>
     <Compile Include="connexion\connexiondatabase.cs" />
+    <Compile Include="controleur\classControl.cs" />
+    <Compile Include="dal\classdal.cs" />
+    <Compile Include="modele\classAbsences.cs" />
+    <Compile Include="modele\classPersonnels.cs" />
+    <Compile Include="modele\classResponsables.cs" />
     <Compile Include="vue\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,16 +107,38 @@
     <EmbeddedResource Include="vue\responsablegestioper.resx">
       <DependentUpon>responsablegestioper.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="appligestiopersonnelsomaDataSet.xsc">
-      <DependentUpon>appligestiopersonnelsomaDataSet.xsd</DependentUpon>
+    <None Include="appligestiopersonnelsomaDataSet2.xsc">
+      <DependentUpon>appligestiopersonnelsomaDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="appligestiopersonnelsomaDataSet.xsd">
+    <None Include="appligestiopersonnelsomaDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>appligestiopersonnelsomaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>appligestiopersonnelsomaDataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="appligestiopersonnelsomaDataSet.xss">
-      <DependentUpon>appligestiopersonnelsomaDataSet.xsd</DependentUpon>
+    <None Include="appligestiopersonnelsomaDataSet2.xss">
+      <DependentUpon>appligestiopersonnelsomaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="db1.xsc">
+      <DependentUpon>db1.xsd</DependentUpon>
+    </None>
+    <None Include="db1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db1.xss">
+      <DependentUpon>db1.xsd</DependentUpon>
+    </None>
+    <None Include="db2.xsc">
+      <DependentUpon>db2.xsd</DependentUpon>
+    </None>
+    <None Include="db2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db2.xss">
+      <DependentUpon>db2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -116,10 +153,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controleur\" />
-    <Folder Include="modele\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\gestiopersoma2.jpg" />
   </ItemGroup>
