@@ -56,10 +56,15 @@
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="appligestiopersonnelsomaDataSet2.Designer.cs">
+    <Compile Include="appligestiopersonnelsomaDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>appligestiopersonnelsomaDataSet2.xsd</DependentUpon>
+      <DependentUpon>appligestiopersonnelsomaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db3.xsd</DependentUpon>
     </Compile>
     <Compile Include="db1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -107,16 +112,27 @@
     <EmbeddedResource Include="vue\responsablegestioper.resx">
       <DependentUpon>responsablegestioper.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="appligestiopersonnelsomaDataSet2.xsc">
-      <DependentUpon>appligestiopersonnelsomaDataSet2.xsd</DependentUpon>
+    <None Include="appligestiopersonnelsomaDataSet3.xsc">
+      <DependentUpon>appligestiopersonnelsomaDataSet3.xsd</DependentUpon>
     </None>
-    <None Include="appligestiopersonnelsomaDataSet2.xsd">
+    <None Include="appligestiopersonnelsomaDataSet3.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>appligestiopersonnelsomaDataSet2.Designer.cs</LastGenOutput>
+      <LastGenOutput>appligestiopersonnelsomaDataSet3.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="appligestiopersonnelsomaDataSet2.xss">
-      <DependentUpon>appligestiopersonnelsomaDataSet2.xsd</DependentUpon>
+    <None Include="appligestiopersonnelsomaDataSet3.xss">
+      <DependentUpon>appligestiopersonnelsomaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="db3.xsc">
+      <DependentUpon>db3.xsd</DependentUpon>
+    </None>
+    <None Include="db3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db3.xss">
+      <DependentUpon>db3.xsd</DependentUpon>
     </None>
     <None Include="db1.xsc">
       <DependentUpon>db1.xsd</DependentUpon>
