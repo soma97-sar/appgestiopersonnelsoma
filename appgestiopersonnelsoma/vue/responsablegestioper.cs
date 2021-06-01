@@ -83,7 +83,7 @@ namespace appgestiopersonnelsoma.vue
                
                 textBoxdatedeb.Text = absence.Datedebut;
                 textBoxdatefin.Text = absence.Datefin;
-            //    comboBoxmotif.SelectedIndex = comboBoxmotif.FindStringExact(absence, idmotif);//???
+            //    comboBoxmotif.SelectedIndex = comboBoxmotif.FindStringExact(absence, idmotif);//??
             }
             else
             {
