@@ -17,11 +17,18 @@ namespace appgestiopersonnelsoma
 
     {
         private classControl controle;
+        /// <summary>
+        /// appgestio
+        /// </summary>
         public appgestio()
         {
             InitializeComponent();
             controle = new classControl();
         }
+        /// <summary>
+        /// controle
+        /// </summary>
+        /// <param name="controle"></param>
         public appgestio(classControl controle)
         {
             InitializeComponent();

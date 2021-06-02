@@ -57,6 +57,15 @@ namespace appgestiopersonnelsoma.vue
             this.textBoxdatefin = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewpersonnel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewabsence)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +92,7 @@ namespace appgestiopersonnelsoma.vue
             // 
             // btnajouterpersonnel
             // 
-            this.btnajouterpersonnel.Location = new System.Drawing.Point(12, 36);
+            this.btnajouterpersonnel.Location = new System.Drawing.Point(15, 75);
             this.btnajouterpersonnel.Name = "btnajouterpersonnel";
             this.btnajouterpersonnel.Size = new System.Drawing.Size(104, 38);
             this.btnajouterpersonnel.TabIndex = 2;
@@ -93,7 +102,7 @@ namespace appgestiopersonnelsoma.vue
             // 
             // btnmodifierpersonnel
             // 
-            this.btnmodifierpersonnel.Location = new System.Drawing.Point(12, 108);
+            this.btnmodifierpersonnel.Location = new System.Drawing.Point(15, 125);
             this.btnmodifierpersonnel.Name = "btnmodifierpersonnel";
             this.btnmodifierpersonnel.Size = new System.Drawing.Size(104, 38);
             this.btnmodifierpersonnel.TabIndex = 3;
@@ -103,7 +112,7 @@ namespace appgestiopersonnelsoma.vue
             // 
             // btnsupprimerpersonnel
             // 
-            this.btnsupprimerpersonnel.Location = new System.Drawing.Point(12, 175);
+            this.btnsupprimerpersonnel.Location = new System.Drawing.Point(15, 175);
             this.btnsupprimerpersonnel.Name = "btnsupprimerpersonnel";
             this.btnsupprimerpersonnel.Size = new System.Drawing.Size(104, 38);
             this.btnsupprimerpersonnel.TabIndex = 4;
@@ -113,7 +122,7 @@ namespace appgestiopersonnelsoma.vue
             // 
             // btnajouterabsence
             // 
-            this.btnajouterabsence.Location = new System.Drawing.Point(12, 400);
+            this.btnajouterabsence.Location = new System.Drawing.Point(12, 443);
             this.btnajouterabsence.Name = "btnajouterabsence";
             this.btnajouterabsence.Size = new System.Drawing.Size(104, 38);
             this.btnajouterabsence.TabIndex = 5;
@@ -123,7 +132,7 @@ namespace appgestiopersonnelsoma.vue
             // 
             // btnmodifabsence
             // 
-            this.btnmodifabsence.Location = new System.Drawing.Point(12, 477);
+            this.btnmodifabsence.Location = new System.Drawing.Point(12, 499);
             this.btnmodifabsence.Name = "btnmodifabsence";
             this.btnmodifabsence.Size = new System.Drawing.Size(104, 38);
             this.btnmodifabsence.TabIndex = 6;
@@ -133,7 +142,7 @@ namespace appgestiopersonnelsoma.vue
             // 
             // btnsupprabsence
             // 
-            this.btnsupprabsence.Location = new System.Drawing.Point(12, 543);
+            this.btnsupprabsence.Location = new System.Drawing.Point(12, 552);
             this.btnsupprabsence.Name = "btnsupprabsence";
             this.btnsupprabsence.Size = new System.Drawing.Size(104, 38);
             this.btnsupprabsence.TabIndex = 7;
@@ -185,10 +194,10 @@ namespace appgestiopersonnelsoma.vue
             // 
             this.comboBoxservice.FormattingEnabled = true;
             this.comboBoxservice.Items.AddRange(new object[] {
-            "administratif",
-            "prêt",
-            "mediation culturelle"});
-            this.comboBoxservice.Location = new System.Drawing.Point(934, 278);
+            "1",
+            "2",
+            "3"});
+            this.comboBoxservice.Location = new System.Drawing.Point(930, 307);
             this.comboBoxservice.Name = "comboBoxservice";
             this.comboBoxservice.Size = new System.Drawing.Size(255, 24);
             this.comboBoxservice.TabIndex = 12;
@@ -198,10 +207,10 @@ namespace appgestiopersonnelsoma.vue
             // 
             this.comboBoxmotif.FormattingEnabled = true;
             this.comboBoxmotif.Items.AddRange(new object[] {
-            "vacances",
-            "maladie",
-            "motif familial",
-            "congé parental"});
+            "1",
+            "2",
+            "3",
+            "4"});
             this.comboBoxmotif.Location = new System.Drawing.Point(613, 671);
             this.comboBoxmotif.Name = "comboBoxmotif";
             this.comboBoxmotif.Size = new System.Drawing.Size(255, 24);
@@ -306,7 +315,7 @@ namespace appgestiopersonnelsoma.vue
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(844, 285);
+            this.label7.Location = new System.Drawing.Point(845, 309);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 17);
             this.label7.TabIndex = 26;
@@ -321,6 +330,87 @@ namespace appgestiopersonnelsoma.vue
             this.label8.TabIndex = 27;
             this.label8.Text = "motif";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(931, 230);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 17);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "administratif ==> (1)";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(931, 282);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(180, 17);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "mediation culturelle ==> (3)";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(931, 256);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 17);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "prêt ==> (2)";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(890, 660);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(107, 17);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "maladie ==> (1)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(890, 685);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(118, 17);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "vacances ==> (2)";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(890, 711);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(153, 17);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "conge parental ==> (3)";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(894, 736);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(135, 17);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "motif familial ==> (4)";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(23, 36);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 17);
+            this.label16.TabIndex = 35;
+            this.label16.Text = "personnel";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(32, 400);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(62, 17);
+            this.label17.TabIndex = 36;
+            this.label17.Text = "absence";
+            // 
             // responsablegestioper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -328,6 +418,15 @@ namespace appgestiopersonnelsoma.vue
             this.BackgroundImage = global::appgestiopersonnelsoma.Properties.Resources.gestiopersoma2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1215, 759);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxdatefin);
@@ -395,5 +494,14 @@ namespace appgestiopersonnelsoma.vue
         private System.Windows.Forms.TextBox textBoxdatefin;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
     }
 }

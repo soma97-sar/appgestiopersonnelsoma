@@ -10,8 +10,12 @@ using System.Configuration;
 
 namespace appgestiopersonnelsoma.connexion
 {
+    /// <summary>
+    /// la connexion a database
+    /// </summary>
    public class connexiondatabase
     {
+
       //  private static connexiondatabase instance = null;
         private MySqlConnection connection;
         private MySqlCommand command;
@@ -30,10 +34,19 @@ namespace appgestiopersonnelsoma.connexion
                 Application.Exit();
             }
         }
+        /// <summary>
+        /// GetInstance
+        /// </summary>
+        /// <returns></returns>
         public static connexiondatabase GetInstance( )
         {
             return new connexiondatabase();
         }
+        /// <summary>
+        /// les requettes
+        /// </summary>
+        /// <param name="stringQuery"></param>
+        /// <param name="parameters"></param>
         public void ReqUpdate(string stringQuery, Dictionary<string, Object> parameters)
         {
             try
@@ -52,6 +65,10 @@ namespace appgestiopersonnelsoma.connexion
                 Console.WriteLine(e.Message);
             }
         }
+        /// <summary>
+        /// les requettes
+        /// </summary>
+        /// <param name="stringQuery"></param>
         public void ReqSelect(string stringQuery)
         {
             try
@@ -64,6 +81,10 @@ namespace appgestiopersonnelsoma.connexion
                 Console.WriteLine(e.Message);
             }
         }
+        /// <summary>
+        /// requette
+        /// </summary>
+        /// <returns></returns>
         public bool Read()
         {
             if (reader == null)
@@ -79,6 +100,11 @@ namespace appgestiopersonnelsoma.connexion
                 return false;
             }
         }
+        /// <summary>
+        /// field
+        /// </summary>
+        /// <param name="nameField"></param>
+        /// <returns></returns>
         public object Field(string nameField)
         {
             if (reader == null)
@@ -94,6 +120,9 @@ namespace appgestiopersonnelsoma.connexion
                 return null;
             }
         }
+        /// <summary>
+        /// reader
+        /// </summary>
         public void Close()
         {
             if (!(reader == null))

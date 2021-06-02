@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace appgestiopersonnelsoma.modele
 {
+    /// <summary>
+    /// classe des absences
+    /// </summary>
    public class classAbsences
     {
         private int idpersonnel;
         private string datedebut;
         private string datefin;
         private int idmotif;
-
+        /// <summary>
+        /// les variables
+        /// </summary>
 
         public int Idpersonnel { get { return this.idpersonnel; }  }
         public string Datedebut { get { return datedebut; } }
@@ -21,7 +26,13 @@ namespace appgestiopersonnelsoma.modele
         public int V3 { get; }
         public int V4 { get; }
 
-
+        /// <summary>
+        /// les variables
+        /// </summary>
+        /// <param name="datedebut"></param>
+        /// <param name="datefin"></param>
+        /// <param name="idmotif"></param>
+        /// <param name="idpersonnel"></param>
 
       
 

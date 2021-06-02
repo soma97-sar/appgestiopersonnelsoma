@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace appgestiopersonnelsoma.modele
 {
+    /// <summary>
+    /// class personnell
+    /// </summary>
    public class classPersonnels
     {
         private int idpersonnel;
@@ -15,7 +18,9 @@ namespace appgestiopersonnelsoma.modele
         private string mail;
 
         private int idservice;
-
+        /// <summary>
+        /// les variables
+        /// </summary>
 
         public int Idpersonnel { get { return this.idpersonnel; } }
         public string Nom { get { return this.nom; } }
@@ -25,7 +30,15 @@ namespace appgestiopersonnelsoma.modele
 
         public int Idservice { get { return this.idservice; } }
 
-
+        /// <summary>
+        /// les variables
+        /// </summary>
+        /// <param name="idpersonnel"></param>
+        /// <param name="idservice"></param>
+        /// <param name="mail"></param>
+        /// <param name="nom"></param>
+        /// <param name="prenom"></param>
+        /// <param name="tel"></param>
 
       
 

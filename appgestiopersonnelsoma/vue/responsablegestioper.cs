@@ -12,13 +12,19 @@ using System.Windows.Forms;
 
 namespace appgestiopersonnelsoma.vue
 {
+    /// <summary>
+    /// responsale de gestion personnel
+    /// </summary>
     public partial class responsablegestioper : Form
     {
         private classControl controle;
         private Boolean modification = false;
         BindingSource bdgpersonnels= new BindingSource();
         BindingSource bdgabsences= new BindingSource();
-
+        /// <summary>
+        /// controle
+        /// </summary>
+        /// <param name="controle"></param>
         public responsablegestioper(classControl controle)
         {
             InitializeComponent();
@@ -29,6 +35,9 @@ namespace appgestiopersonnelsoma.vue
 
 
         }
+        /// <summary>
+        /// remplirpersonnel
+        /// </summary>
         public void remplirpersonnels()
         {
             List<classPersonnels> lesPersonnels = controle.GetPersonnels();
@@ -38,6 +47,9 @@ namespace appgestiopersonnelsoma.vue
             dataGridViewpersonnel.Columns["idpersonnel"].Visible = false;
             dataGridViewpersonnel.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+        /// <summary>
+        /// remplirabsence
+        /// </summary>
         public void remplirabsences()
         {
             List<classAbsences> lesAbsences = controle.GetAbsences();
@@ -54,19 +66,26 @@ namespace appgestiopersonnelsoma.vue
             if (dataGridViewpersonnel.SelectedRows.Count > 0)
             {
                 modification = true;
-
                 classPersonnels personnel = (classPersonnels)bdgpersonnels.List[bdgpersonnels.Position];
                 textBoxnompers.Text = personnel.Nom;
                 textBoxprenompers.Text = personnel.Prenom;
                 textBoxtelpers.Text = personnel.Tel;
                 textBoxmailpers.Text = personnel.Mail;
                 comboBoxservice.SelectedIndex = comboBoxservice.FindStringExact(personnel.Idservice + "");
+                dataGridViewpersonnel.Rows.Add(textBoxnompers.Text, textBoxprenompers.Text, textBoxmailpers.Text, textBoxtelpers.Text);
+
             }
+
             else
             {
                 MessageBox.Show("Tous les champs doivent être remplis.", "Information");
             }
+
+            //dataGridViewpersonnel.Rows.Add(textBoxnompers.Text, textBoxprenompers.Text, textBoxmailpers.Text, textBoxtelpers.Text);
+
+
         }
+
 
         private void btnmodifierpersonnel_Click(object sender, EventArgs e)
         {
@@ -227,7 +246,7 @@ namespace appgestiopersonnelsoma.vue
 
         private void btnsupprabsence_Click(object sender, EventArgs e)
         {
-            if (dataGridViewpersonnel.SelectedRows.Count > 0)
+            if (dataGridViewabsence.SelectedRows.Count > 0)
             {
                 classAbsences absence = (classAbsences)bdgabsences.List[bdgabsences.Position];
                 if (MessageBox.Show("Voulez-vous vraiment supprimer " + absence.Datedebut + " " + absence.Idmotif + " ?", "Confirmation de suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)

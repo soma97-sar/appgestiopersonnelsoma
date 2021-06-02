@@ -8,10 +8,18 @@ using System.Configuration;
 
 namespace appgestiopersonnelsoma.dal
 {
+    /// <summary>
+    /// la classe dal
+    /// </summary>
      public class classdal
     {
+        
        
         private static string connectionString = ConfigurationManager.ConnectionStrings["myCnxString"].ConnectionString.ToString();
+        /// <summary>
+        /// getper
+        /// </summary>
+        /// <returns></returns>
         public static List<classPersonnels> GetPersonnels()
         {
             List<classPersonnels> lesPersonnels = new List<classPersonnels>();
@@ -28,6 +36,10 @@ namespace appgestiopersonnelsoma.dal
             return lesPersonnels;
 
         }
+        /// <summary>
+        /// getabs
+        /// </summary>
+        /// <returns></returns>
         public static List<classAbsences> GetAbsences()
         {
             List<classAbsences> lesAbsences = new List<classAbsences>();
@@ -44,6 +56,10 @@ namespace appgestiopersonnelsoma.dal
             return lesAbsences;
 
         }
+        /// <summary>
+        /// detapersonnel
+        /// </summary>
+        /// <param name="personnel"></param>
         public static void DelPersonnels(classPersonnels personnel)
         {
             string req = "delete from personnels where idpersonnels = @idpersonnels;";
@@ -52,6 +68,10 @@ namespace appgestiopersonnelsoma.dal
             connexiondatabase conn = connexiondatabase.GetInstance();
             conn.ReqUpdate(req, parameters);
         }
+        /// <summary>
+        /// delabs
+        /// </summary>
+        /// <param name="absence"></param>
         public static void DelAbsences(classAbsences absence)
         {
             string req = "delete from absences where datedebuts = @datedebuts;";
@@ -60,6 +80,10 @@ namespace appgestiopersonnelsoma.dal
             connexiondatabase conn = connexiondatabase.GetInstance();
             conn.ReqUpdate(req, parameters);
         }
+        /// <summary>
+        /// addpers
+        /// </summary>
+        /// <param name="personnel"></param>
         public static void AddPersonnels(classPersonnels personnel)
         {
             string req = "insert into personnels(nom, prenom, tel, mail, idservices) ";
@@ -74,6 +98,10 @@ namespace appgestiopersonnelsoma.dal
             connexiondatabase conn = connexiondatabase.GetInstance();
             conn.ReqUpdate(req, parameters);
         }
+        /// <summary>
+        /// addabs
+        /// </summary>
+        /// <param name="absence"></param>
         public static void AddAbsences(classAbsences absence)
         {
             string req = "insert into absences(datedebuts, datefins, idmotifs) ";
@@ -86,6 +114,10 @@ namespace appgestiopersonnelsoma.dal
             connexiondatabase conn = connexiondatabase.GetInstance();
             conn.ReqUpdate(req, parameters);
         }
+        /// <summary>
+        /// updatepers
+        /// </summary>
+        /// <param name="personnel"></param>
         public static void UpdatePersonnels(classPersonnels personnel)
         {
             string req = "update personnels set idpersonnels = @idpersonnels, idservices = @idservices, mail = @mail, nom = @nom, prenom = @prenom, tel = @tel ";
@@ -100,6 +132,10 @@ namespace appgestiopersonnelsoma.dal
             connexiondatabase conn = connexiondatabase.GetInstance();
             conn.ReqUpdate(req, parameters);
         }
+        /// <summary>
+        /// audateabs
+        /// </summary>
+        /// <param name="absence"></param>
         public static void UpdateAbsences(classAbsences absence)
         {
             string req = "update developpeur set datedebuts = @datedebuts, datefins = @datefins, idmotifs = @idmotifs, idpersonnels = @idpersonnels ";
@@ -113,6 +149,12 @@ namespace appgestiopersonnelsoma.dal
             conn.ReqUpdate(req, parameters);
 
         }
+        /// <summary>
+        /// contrologin
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="pwd"></param>
+        /// <returns></returns>
        
         public static Boolean Controlelogin(string login, string pwd)
         {
