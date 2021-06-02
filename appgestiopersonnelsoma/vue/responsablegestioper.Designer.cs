@@ -119,6 +119,7 @@ namespace appgestiopersonnelsoma.vue
             this.btnajouterabsence.TabIndex = 5;
             this.btnajouterabsence.Text = "ajouter";
             this.btnajouterabsence.UseVisualStyleBackColor = true;
+            this.btnajouterabsence.Click += new System.EventHandler(this.btnajouterabsence_Click);
             // 
             // btnmodifabsence
             // 
@@ -183,14 +184,24 @@ namespace appgestiopersonnelsoma.vue
             // comboBoxservice
             // 
             this.comboBoxservice.FormattingEnabled = true;
+            this.comboBoxservice.Items.AddRange(new object[] {
+            "administratif",
+            "prêt",
+            "mediation culturelle"});
             this.comboBoxservice.Location = new System.Drawing.Point(934, 278);
             this.comboBoxservice.Name = "comboBoxservice";
             this.comboBoxservice.Size = new System.Drawing.Size(255, 24);
             this.comboBoxservice.TabIndex = 12;
+            this.comboBoxservice.SelectedIndexChanged += new System.EventHandler(this.comboBoxservice_SelectedIndexChanged);
             // 
             // comboBoxmotif
             // 
             this.comboBoxmotif.FormattingEnabled = true;
+            this.comboBoxmotif.Items.AddRange(new object[] {
+            "vacances",
+            "maladie",
+            "motif familial",
+            "congé parental"});
             this.comboBoxmotif.Location = new System.Drawing.Point(613, 671);
             this.comboBoxmotif.Name = "comboBoxmotif";
             this.comboBoxmotif.Size = new System.Drawing.Size(255, 24);

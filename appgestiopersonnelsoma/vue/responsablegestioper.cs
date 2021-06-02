@@ -25,6 +25,7 @@ namespace appgestiopersonnelsoma.vue
             this.controle = controle;
             remplirpersonnels();
             remplirabsences();
+            
 
 
         }
@@ -50,7 +51,21 @@ namespace appgestiopersonnelsoma.vue
 
         private void btnajouterpersonnel_Click(object sender, EventArgs e)
         {
+            if (dataGridViewpersonnel.SelectedRows.Count > 0)
+            {
+                modification = true;
 
+                classPersonnels personnel = (classPersonnels)bdgpersonnels.List[bdgpersonnels.Position];
+                textBoxnompers.Text = personnel.Nom;
+                textBoxprenompers.Text = personnel.Prenom;
+                textBoxtelpers.Text = personnel.Tel;
+                textBoxmailpers.Text = personnel.Mail;
+                comboBoxservice.SelectedIndex = comboBoxservice.FindStringExact(personnel.Idservice + "");
+            }
+            else
+            {
+                MessageBox.Show("Tous les champs doivent être remplis.", "Information");
+            }
         }
 
         private void btnmodifierpersonnel_Click(object sender, EventArgs e)
@@ -83,7 +98,7 @@ namespace appgestiopersonnelsoma.vue
                
                 textBoxdatedeb.Text = absence.Datedebut;
                 textBoxdatefin.Text = absence.Datefin;
-            //    comboBoxmotif.SelectedIndex = comboBoxmotif.FindStringExact(absence, idmotif);//??
+            
             }
             else
             {
@@ -94,12 +109,72 @@ namespace appgestiopersonnelsoma.vue
 
         private void btnenregistrerpersonnel_Click(object sender, EventArgs e)
         {
-            
+            if (!textBoxnompers.Text.Equals("") && !textBoxprenompers.Text.Equals("") && !textBoxmailpers.Text.Equals("") && !textBoxtelpers.Text.Equals("") && comboBoxservice.SelectedIndex != -1)
+            {
+               
+                int idpersonnel = 0;
+                int idservice=0 ;
+
+                classPersonnels personnel = new classPersonnels(idpersonnel,idservice, textBoxmailpers.Text, textBoxnompers.Text, textBoxprenompers.Text,textBoxtelpers.Text);
+                if (modification)
+                {
+                    controle.UpdatePersonnels(personnel);
+                    modification = false;
+                   
+                }
+                else
+                {
+                    controle.AddPersonnels(personnel);
+                }
+                remplirpersonnels();
+                
+                textBoxprenompers.Text = "";
+                textBoxnompers.Text = "";
+                textBoxmailpers.Text = "";
+                textBoxtelpers.Text = "";
+
+                comboBoxservice.SelectedIndex = 0;
+
+            }
+            else
+            {
+                MessageBox.Show("Tous les champs doivent être remplis.", "Information");
+            }
+
         }
 
         private void btnenregisabsence_Click(object sender, EventArgs e)
         {
-           
+            if (!textBoxdatedeb.Text.Equals("") && !textBoxdatefin.Text.Equals("") && comboBoxmotif.SelectedIndex != -1)
+            {
+                
+                int idmotif = 0;
+                int idpersonnel = 0;
+              
+                classAbsences absence = new classAbsences( textBoxdatedeb.Text, textBoxdatefin.Text, idmotif,idpersonnel);
+                if (modification)
+                {
+                    controle.UpdateAbsences(absence);
+                    modification = false;
+                   
+                }
+                else
+                {
+                    controle.AddAbsences(absence);
+                }
+                remplirabsences();
+                textBoxdatefin.Text = "";
+                textBoxdatedeb.Text = "";
+
+                comboBoxmotif.SelectedIndex = 0;
+            }
+            else
+            {
+                MessageBox.Show("Tous les champs doivent être remplis.", "Information");
+            }
+
+
+
         }
 
         private void btnannulerpersonnel_Click(object sender, EventArgs e)
@@ -164,6 +239,30 @@ namespace appgestiopersonnelsoma.vue
             else
             {
                 MessageBox.Show("Une ligne doit être sélectionnée.", "Information");
+            }
+        }
+
+        private void comboBoxservice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnajouterabsence_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewabsence.SelectedRows.Count > 0)
+            {
+
+                modification = true;
+
+                classAbsences absence = (classAbsences)bdgabsences.List[bdgabsences.Position];
+
+                textBoxdatedeb.Text = absence.Datedebut;
+                textBoxdatefin.Text = absence.Datefin;
+                
+            }
+            else
+            {
+                MessageBox.Show("Tous les champs doivent être remplis.", "Information");
             }
         }
     }
